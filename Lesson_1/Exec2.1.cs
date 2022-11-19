@@ -7,15 +7,17 @@ namespace Exec1
         public static void Main(string[] args)
         {
           int n = Convert.ToInt32(Console.ReadLine());
-            string new_n = "";
+            int n_convert = 0;
+            int counter = 1;
             int digit;
             while (n != 0)
             {
                 digit = n % 2;
-                new_n = digit + new_n;
+                n_convert += digit * counter;
+                counter *= 10;
                 n /= 2;
             }
-            Console.WriteLine(new_n);
+            Console.WriteLine(n_convert);
         }
     }
 }
