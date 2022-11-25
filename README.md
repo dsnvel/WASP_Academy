@@ -7,7 +7,7 @@
 
 Название          | Статус | Ссылка
 ------------------|--------|--------
-Автопарк          | 🔴    | <a href="[https://github.com/dsnvel/WASP_Academy/tree/master/Autopark](https://github.com/dsnvel/WASP_Academy/tree/main/Autopark)">Перейти</a>
+Автопарк          | 🔴    | <a href="https://github.com/dsnvel/WASP_Academy/tree/main/Autopark">Перейти</a>
 
 **Статусы выполнения:** <br>
 🔴 Не готово <br>
