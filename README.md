@@ -8,7 +8,7 @@
 Название          | Статус | Ссылка
 ------------------|--------|--------
 Автопарк          | 🟡    | <a href="https://github.com/dsnvel/WASP_Academy/tree/main/Autopark">Перейти</a>
-Первое ДЗ         | 🟡    |--------
+Первое ДЗ         | 🟡    |<a href="https://github.com/dsnvel/WASP_Academy/tree/main/Lesson_1">Перейти</a>
 
 
 
