@@ -31,7 +31,6 @@ namespace Program
         {
             private int count_of_passengers;
             private Dictionary<string, List<int>> repair_book;
-            private const int size_of_book = 100;
 
             public PassengerCar(string brand, string force, string year_of_made, int count_of_passengers)
                 : base(brand, force, year_of_made)
@@ -122,51 +121,64 @@ namespace Program
             public override string ToString()
             {
                 return ($"{this.Brand}, {this.Force}, {this.Year_of_made}, " +
-                    $"{this.name_and_surname_of_driver}, {this.max_load_capacity}");
+                    $"{this.max_load_capacity}, {this.name_and_surname_of_driver}");
             }
         }
 
         class Autopark
         {
             private static string name_of_autopark = "My_autopark";
-            private static List<object> list_of_cars;
+            private static List<Car> list_of_cars = new List<Car>();
+            /*List<Car> list_of_cars = new List<Car>();*/
 
-            public Autopark()
+            public Autopark() { }
+
+            public static void add_car_to_list_of_cars(Car car)
             {
-                List<object> list_of_cars = new List<object>(20);
+                list_of_cars.Add(car);
             }
 
-            /*public static List<object> List_of_cars
-            {
-                get { return list_of_cars; }
-                set { list_of_cars.Add(value); }
-            }*/
-
-            public static void add_car_to_list_of_cars(object ref car)
-            {
-                object new_car = ref car;
-                Console.WriteLine(new_car);
-                list_of_cars.Add(new_car);
-            }
-
-            public override string ToString()
+            public static string ToString()
             {
                 string info_about_auto_park = "";
 
-                foreach (object car in list_of_cars)
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Autopark:");
+                Console.WriteLine("--------------------");
+                int counter = 1;
+                foreach (Car car in list_of_cars)
                 {
-                    info_about_auto_park += car;
+                    string info = car.ToString();
+                    info_about_auto_park += $"{counter}. " + info + "\n";
+                    counter++;
                 }
-                return $"";
+                info_about_auto_park += "--------------------";
+                return info_about_auto_park;
             }
 
         }
 
         public static void Main(string[] args)
         {
-            Car porche = new Car("porche", "200", "2022");
-            Autopark.add_car_to_list_of_cars(ref porche);
-            Console.WriteLine(porche.ToString());
+            Autopark autopark = new Autopark();
+
+            Car car1 = new Car("Porche", "350", "2022");
+            Autopark.add_car_to_list_of_cars(car1);
+
+            Car car2 = new PassengerCar("Ferrari", "600", "2019", 4);
+            Autopark.add_car_to_list_of_cars(car2);
+
+            Car car3 = new Truck("Ford", "300", "2020", 20, "Danil Vdovenko");
+            Autopark.add_car_to_list_of_cars(car3);
+
+            Car car4 = new PassengerCar("BMW", "250", "2022", 3);
+            Autopark.add_car_to_list_of_cars(car4);
+
+            Car car5 = new Truck("Tundra", "400", "2022", 100, "ne_Danil Vdovenko");
+            Autopark.add_car_to_list_of_cars(car5);
+
+            string result = Autopark.ToString();
+            Console.WriteLine(result);
         }
     }
 }
