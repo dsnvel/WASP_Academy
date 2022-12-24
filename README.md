@@ -8,7 +8,7 @@
 Название          | Статус | Ссылка
 ------------------|--------|--------
 Первое ДЗ         | 🟡    |<a href="https://github.com/dsnvel/WASP_Academy/tree/main/Lesson_1">Перейти</a>
-Автопарк          | 🟡    | <a href="https://github.com/dsnvel/WASP_Academy/tree/main/Autopark">Перейти</a>
+Автопарк          | 🟢    | <a href="https://github.com/dsnvel/WASP_Academy/tree/main/Autopark">Перейти</a>
 Магазин дисков    | 🟡    |<a href="https://github.com/dsnvel/WASP_Academy/tree/main/Store_of_discks">Перейти</a>
 Первая практика   | 🟡    | <a href="https://github.com/dsnvel/WASP_Academy/tree/main/Practice/Safe/Safe">Перейти</a>
 
